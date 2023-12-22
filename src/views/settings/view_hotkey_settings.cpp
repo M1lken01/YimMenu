@@ -60,6 +60,10 @@ namespace big
 			g_hotkey_service->update_hotkey("vehiclefly", g.settings.hotkeys.vehicle_flymode);
 		if (ImGui::Hotkey("CLEAR_WANTED_LEVEL"_T.data(), &g.settings.hotkeys.clear_wanted))
 			g_hotkey_service->update_hotkey("clearwantedlvl", g.settings.hotkeys.clear_wanted);
+		if (ImGui::Hotkey("TOGGLE_AIMBOT"_T.data(), &g.settings.hotkeys.aimbot))
+			g_hotkey_service->update_hotkey("aimbot", g.settings.hotkeys.aimbot);
+		if (ImGui::Hotkey("TOGGLE_ESP"_T.data(), &g.settings.hotkeys.esp))
+			g_hotkey_service->update_hotkey("esp", g.settings.hotkeys.esp);
 
 		ImGui::PopItemWidth();
 	}

@@ -39,6 +39,10 @@ namespace big
 			ImGui::SameLine();
 			components::player_command_button<"desync">(g_player_service->get_selected());
 
+			ImGui::SeparatorText("Crashes (shit)");
+			components::player_command_button<"slodpedcrash">(g_player_service->get_selected());
+			components::player_command_button<"tsecrash">(g_player_service->get_selected());
+
 			ImGui::EndListBox();
 		}
 

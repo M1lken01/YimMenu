@@ -185,6 +185,8 @@ namespace big
 			ImGui::SameLine();
 			components::command_checkbox<"aimatenemy">();
 
+			components::command_checkbox<"loscheck">();
+
 			components::command_checkbox<"smoothing">();
 			if (g.weapons.aimbot.smoothing)
 			{

@@ -51,7 +51,7 @@ namespace big
 					// Update aim lock coords
 					aimbot_handler:
 					{
-						if (!ENTITY::HAS_ENTITY_CLEAR_LOS_TO_ENTITY(self::ped, ped, 17))
+						if (!(ENTITY::HAS_ENTITY_CLEAR_LOS_TO_ENTITY(self::ped, ped, 17) || !g.weapons.aimbot.los_check))
 							continue;
 
 						// Jump to here to handle instead of continue statements
@@ -149,4 +149,5 @@ namespace big
 	bool_command g_aimbot_on_npc("aimatnpc", "NPC", "BACKEND_LOOPED_WEAPONS_AIM_AT_NPC_DESC", g.weapons.aimbot.on_npc);
 	bool_command g_aimbot_on_police("aimatpolice", "POLICE", "BACKEND_LOOPED_WEAPONS_AIM_AT_POLICE_DESC", g.weapons.aimbot.on_police);
 	bool_command g_aimbot_on_enemy("aimatenemy", "BACKEND_LOOPED_WEAPONS_AIM_AT_ENEMY", "BACKEND_LOOPED_WEAPONS_AIM_AT_ENEMY_DESC", g.weapons.aimbot.on_enemy);
+	bool_command g_aimbot_los_check("loscheck", "LOS", "BACKEND_LOOPED_WEAPONS_LOS_DESC", g.weapons.aimbot.los_check);
 }

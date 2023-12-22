@@ -483,8 +483,10 @@ namespace big
 				int open_vehicle_controller = 0;
 				int clear_wanted            = 0;
 				int random_ped_components   = 0;
+				int aimbot                  = 0;
+				int esp                     = 0;
 
-				NLOHMANN_DEFINE_TYPE_INTRUSIVE(hotkeys, editing_menu_toggle, menu_toggle, teleport_waypoint, teleport_objective, teleport_selected, teleport_pv, noclip, vehicle_flymode, bringvehicle, invis, heal, fill_inventory, skip_cutscene, freecam, superrun, passive, superjump, beastjump, invisveh, localinvisveh, fill_ammo, fast_quit, cmd_excecutor, repairpv, open_vehicle_controller, clear_wanted, random_ped_components)
+				NLOHMANN_DEFINE_TYPE_INTRUSIVE(hotkeys, editing_menu_toggle, menu_toggle, teleport_waypoint, teleport_objective, teleport_selected, teleport_pv, noclip, vehicle_flymode, bringvehicle, invis, heal, fill_inventory, skip_cutscene, freecam, superrun, passive, superjump, beastjump, invisveh, localinvisveh, fill_ammo, fast_quit, cmd_excecutor, repairpv, open_vehicle_controller, clear_wanted, random_ped_components, aimbot, esp)
 			} hotkeys{};
 
 			NLOHMANN_DEFINE_TYPE_INTRUSIVE(settings, hotkeys, dev_dlc)
@@ -846,6 +848,7 @@ namespace big
 				bool enable            = false;
 				bool smoothing         = true;
 				float smoothing_speed  = 2.f;
+				bool los_check         = true;
 				bool on_player         = true;
 				bool on_enemy          = false;
 				bool on_police         = false;
@@ -853,7 +856,7 @@ namespace big
 				float fov              = 90.f;
 				float distance         = 200.f;
 				uint32_t selected_bone = 0x796E; // Default to head
-				NLOHMANN_DEFINE_TYPE_INTRUSIVE(aimbot, enable, smoothing, smoothing_speed, fov, distance, selected_bone)
+				NLOHMANN_DEFINE_TYPE_INTRUSIVE(aimbot, enable, smoothing, smoothing_speed, los_check, fov, distance, selected_bone)
 			} aimbot{};
 
 			CustomWeapon custom_weapon    = CustomWeapon::NONE;

@@ -12,10 +12,12 @@ namespace big
 	hotkey_service::hotkey_service()
 	{
 		// ordered alphabetically to more easily see if a certain hotkey is present
+		register_hotkey("aimbot", g.settings.hotkeys.aimbot, RAGE_JOAAT("aimbot"));
 		register_hotkey("beastjump", g.settings.hotkeys.beastjump, RAGE_JOAAT("beastjump"));
 		register_hotkey("bringpv", g.settings.hotkeys.bringvehicle, RAGE_JOAAT("bringpv"));
 		register_hotkey("clearwantedlvl", g.settings.hotkeys.clear_wanted, RAGE_JOAAT("clearwantedlvl"));
 		register_hotkey("cmdexecutor", g.settings.hotkeys.cmd_excecutor, RAGE_JOAAT("cmdexecutor"));
+		register_hotkey("esp", g.settings.hotkeys.esp, RAGE_JOAAT("esp"));
 		register_hotkey("fastquit", g.settings.hotkeys.fast_quit, RAGE_JOAAT("fastquit"));
 		register_hotkey("fastrun", g.settings.hotkeys.superrun, RAGE_JOAAT("fastrun"));
 		register_hotkey("fillammo", g.settings.hotkeys.fill_ammo, RAGE_JOAAT("fillammo"));
