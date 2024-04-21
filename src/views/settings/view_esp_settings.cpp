@@ -9,7 +9,7 @@ namespace big
 		if (g.esp.enabled)
 		{
 			ImGui::Text("SETTINGS_ESP_GLOBAL_RENDER_DISTANCE"_T.data());
-			ImGui::SliderFloat2("###Global Render Distance", g.esp.global_render_distance, 0.f, 1500.f);
+			ImGui::SliderFloat2("###Global Render Distance", g.esp.global_render_distance, 0.f, 2000.f);
 
 			ImGui::Checkbox("SETTINGS_ESP_TRACER"_T.data(), &g.esp.tracer);
 			if (g.esp.tracer)
